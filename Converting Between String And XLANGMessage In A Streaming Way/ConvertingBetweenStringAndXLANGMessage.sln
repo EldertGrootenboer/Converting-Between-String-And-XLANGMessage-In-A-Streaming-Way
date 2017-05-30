@@ -1,0 +1,59 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConvertingBetweenStringAndXLANGMessage.Helpers", "ConvertingBetweenStringAndXLANGMessage.Helpers\ConvertingBetweenStringAndXLANGMessage.Helpers.csproj", "{4C96FEF1-BDC5-4C96-A295-5A525DBA7908}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConvertingBetweenStringAndXLANGMessage.Schemas", "ConvertingBetweenStringAndXLANGMessage.Schemas\ConvertingBetweenStringAndXLANGMessage.Schemas.btproj", "{24DB7171-5A26-488C-AD3C-236A21DF13F3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConvertingBetweenStringAndXLANGMessage.Orchestrations", "ConvertingBetweenStringAndXLANGMessage.Orchestrations\ConvertingBetweenStringAndXLANGMessage.Orchestrations.btproj", "{15A13EEF-0F57-4266-AE0F-EF8505A002E5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Deployment", "Deployment", "{D0D23F54-E61E-4B13-91BE-13E1B43C384D}"
+	ProjectSection(SolutionItems) = preProject
+		Deployment\Deployment.btdfproj = Deployment\Deployment.btdfproj
+		Deployment\InstallWizard.xml = Deployment\InstallWizard.xml
+		Deployment\License.rtf = Deployment\License.rtf
+		Deployment\PortBindingsMaster.xml = Deployment\PortBindingsMaster.xml
+		Deployment\UnInstallWizard.xml = Deployment\UnInstallWizard.xml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EnvironmentSettings", "EnvironmentSettings", "{16ED60E7-C589-4947-A2F4-32A98B66E9D1}"
+	ProjectSection(SolutionItems) = preProject
+		Deployment\EnvironmentSettings\SettingsFileGenerator.xml = Deployment\EnvironmentSettings\SettingsFileGenerator.xml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Orders", "Orders", "{A33A6A4A-7F5D-4A72-9F0A-B4165F128B4B}"
+	ProjectSection(SolutionItems) = preProject
+		Orders\Accepted.xml = Orders\Accepted.xml
+		Orders\Unaccepted.xml = Orders\Unaccepted.xml
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4C96FEF1-BDC5-4C96-A295-5A525DBA7908}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C96FEF1-BDC5-4C96-A295-5A525DBA7908}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C96FEF1-BDC5-4C96-A295-5A525DBA7908}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C96FEF1-BDC5-4C96-A295-5A525DBA7908}.Release|Any CPU.Build.0 = Release|Any CPU
+		{24DB7171-5A26-488C-AD3C-236A21DF13F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24DB7171-5A26-488C-AD3C-236A21DF13F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24DB7171-5A26-488C-AD3C-236A21DF13F3}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{24DB7171-5A26-488C-AD3C-236A21DF13F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24DB7171-5A26-488C-AD3C-236A21DF13F3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{24DB7171-5A26-488C-AD3C-236A21DF13F3}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{15A13EEF-0F57-4266-AE0F-EF8505A002E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15A13EEF-0F57-4266-AE0F-EF8505A002E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15A13EEF-0F57-4266-AE0F-EF8505A002E5}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{15A13EEF-0F57-4266-AE0F-EF8505A002E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15A13EEF-0F57-4266-AE0F-EF8505A002E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{15A13EEF-0F57-4266-AE0F-EF8505A002E5}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{16ED60E7-C589-4947-A2F4-32A98B66E9D1} = {D0D23F54-E61E-4B13-91BE-13E1B43C384D}
+	EndGlobalSection
+EndGlobal

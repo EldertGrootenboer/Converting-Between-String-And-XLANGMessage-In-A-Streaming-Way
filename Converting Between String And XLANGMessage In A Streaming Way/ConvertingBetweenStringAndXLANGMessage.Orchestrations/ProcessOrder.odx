@@ -1,0 +1,287 @@
+﻿#if __DESIGNER_DATA
+#error Do not define __DESIGNER_DATA.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<om:MetaModel MajorVersion="1" MinorVersion="3" Core="2b131234-7959-458d-834f-2dc0769ce683" ScheduleModel="66366196-361d-448d-976f-cab5e87496d2" xmlns:om="http://schemas.microsoft.com/BizTalk/2003/DesignerData">
+    <om:Element Type="Module" OID="6e2d8257-749a-42d6-ad14-c44e6463691f" LowerBound="1.1" HigherBound="66.1">
+        <om:Property Name="ReportToAnalyst" Value="True" />
+        <om:Property Name="Name" Value="ConvertingBetweenStringAndXLANGMessage.Orchestrations" />
+        <om:Property Name="Signal" Value="False" />
+        <om:Element Type="PortType" OID="3fab3e0e-3af5-402b-836e-3385a8d86b53" ParentLink="Module_PortType" LowerBound="13.1" HigherBound="20.1">
+            <om:Property Name="Synchronous" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="PortType_ReceiveOrder" />
+            <om:Property Name="Signal" Value="True" />
+            <om:Element Type="OperationDeclaration" OID="a8c2010f-23ec-4208-b506-7a47f0c6bac3" ParentLink="PortType_OperationDeclaration" LowerBound="15.1" HigherBound="19.1">
+                <om:Property Name="OperationType" Value="OneWay" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="ReceiveOrder" />
+                <om:Property Name="Signal" Value="True" />
+                <om:Element Type="MessageRef" OID="aff41006-b4f0-494c-845f-c3a18f9ba048" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="17.13" HigherBound="17.32">
+                    <om:Property Name="Ref" Value="ConvertingBetweenStringAndXLANGMessage.Orchestrations.MultipartType_Order" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Order" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="PortType" OID="9032748f-e0b0-4940-9528-92fd8d205003" ParentLink="Module_PortType" LowerBound="20.1" HigherBound="27.1">
+            <om:Property Name="Synchronous" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="PortType_SendOrder" />
+            <om:Property Name="Signal" Value="True" />
+            <om:Element Type="OperationDeclaration" OID="c97ef24b-b879-4cf4-8c12-0328a7087afd" ParentLink="PortType_OperationDeclaration" LowerBound="22.1" HigherBound="26.1">
+                <om:Property Name="OperationType" Value="OneWay" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="SendOrder" />
+                <om:Property Name="Signal" Value="True" />
+                <om:Element Type="MessageRef" OID="2eff386f-fdee-4b8d-b8e1-d19e9d760bff" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="24.13" HigherBound="24.43">
+                    <om:Property Name="Ref" Value="ConvertingBetweenStringAndXLANGMessage.Orchestrations.MultipartType_OrderWithRouting" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="OrderWithRouting" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="MultipartMessageType" OID="b4348610-2469-4f62-9d74-5cc940121c13" ParentLink="Module_MessageType" LowerBound="4.1" HigherBound="8.1">
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="MultipartType_Order" />
+            <om:Property Name="Signal" Value="True" />
+            <om:Element Type="PartDeclaration" OID="31a6ec7f-eaba-475b-a9f3-fc8a888a3fdb" ParentLink="MultipartMessageType_PartDeclaration" LowerBound="6.1" HigherBound="7.1">
+                <om:Property Name="ClassName" Value="ConvertingBetweenStringAndXLANGMessage.Schemas.Order" />
+                <om:Property Name="IsBodyPart" Value="True" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="MessagePart" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+        </om:Element>
+        <om:Element Type="MultipartMessageType" OID="fff1b5bd-d2e2-4902-85bc-a53ee9f2c5a6" ParentLink="Module_MessageType" LowerBound="8.1" HigherBound="13.1">
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="MultipartType_OrderWithRouting" />
+            <om:Property Name="Signal" Value="True" />
+            <om:Element Type="PartDeclaration" OID="8907e36d-6ee7-4148-a52c-a5430b66b09d" ParentLink="MultipartMessageType_PartDeclaration" LowerBound="10.1" HigherBound="11.1">
+                <om:Property Name="ClassName" Value="ConvertingBetweenStringAndXLANGMessage.Schemas.Order" />
+                <om:Property Name="IsBodyPart" Value="True" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="MessagePart" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="PartDeclaration" OID="0e3d457f-a0c8-461d-bf3f-5846d02f2087" ParentLink="MultipartMessageType_PartDeclaration" LowerBound="11.1" HigherBound="12.1">
+                <om:Property Name="ClassName" Value="ConvertingBetweenStringAndXLANGMessage.Schemas.Routing" />
+                <om:Property Name="IsBodyPart" Value="False" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="RoutingPart" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+        </om:Element>
+        <om:Element Type="ServiceDeclaration" OID="2bc4052f-a074-4a32-bac3-e7a14b9b4de3" ParentLink="Module_ServiceDeclaration" LowerBound="27.1" HigherBound="65.1">
+            <om:Property Name="InitializedTransactionType" Value="False" />
+            <om:Property Name="IsInvokable" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="ProcessOrder" />
+            <om:Property Name="Signal" Value="True" />
+            <om:Element Type="VariableDeclaration" OID="0bf65fc8-c303-4817-a3a2-b58270892fdd" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="36.1" HigherBound="37.1">
+                <om:Property Name="UseDefaultConstructor" Value="False" />
+                <om:Property Name="Type" Value="System.String" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Target" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="c08ecc8e-f915-4aca-9e2b-617f9eae5e85" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="34.1" HigherBound="35.1">
+                <om:Property Name="Type" Value="ConvertingBetweenStringAndXLANGMessage.Orchestrations.MultipartType_Order" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Order" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="fd6d8ad8-38ba-4d76-86f0-d2ed18a8771e" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="35.1" HigherBound="36.1">
+                <om:Property Name="Type" Value="ConvertingBetweenStringAndXLANGMessage.Orchestrations.MultipartType_OrderWithRouting" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="OrderWithRouting" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="ServiceBody" OID="cc7c1671-72ea-4fa7-9d6b-340b234d53f6" ParentLink="ServiceDeclaration_ServiceBody">
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="Receive" OID="6099f1a1-a03a-4fd9-a426-2deb19c00168" ParentLink="ServiceBody_Statement" LowerBound="39.1" HigherBound="42.1">
+                    <om:Property Name="Activate" Value="True" />
+                    <om:Property Name="PortName" Value="Port_ReceiveOrder" />
+                    <om:Property Name="MessageName" Value="Order" />
+                    <om:Property Name="OperationName" Value="ReceiveOrder" />
+                    <om:Property Name="OperationMessageName" Value="Order" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Receive_Order" />
+                    <om:Property Name="Signal" Value="True" />
+                    <om:Element Type="DNFPredicate" OID="a0ca2935-ce86-4b30-b818-e5f41de95bd1" ParentLink="Receive_DNFPredicate">
+                        <om:Property Name="LHS" Value="BTS.ReceivePortName" />
+                        <om:Property Name="RHS" Value="&quot;ReceivePortOrders&quot;" />
+                        <om:Property Name="Grouping" Value="AND" />
+                        <om:Property Name="Operator" Value="Equals" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                </om:Element>
+                <om:Element Type="Decision" OID="fa587c9a-66f0-492a-b2ac-1201952364be" ParentLink="ServiceBody_Statement" LowerBound="42.1" HigherBound="55.1">
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Decide_ValidInput" />
+                    <om:Property Name="Signal" Value="True" />
+                    <om:Element Type="DecisionBranch" OID="9d58d5f6-4784-4085-b76f-e484bae00153" ParentLink="ReallyComplexStatement_Branch" LowerBound="43.13" HigherBound="49.1">
+                        <om:Property Name="Expression" Value="(Order.MessagePart.Amount * Order.MessagePart.Price) &lt; 10000" />
+                        <om:Property Name="IsGhostBranch" Value="True" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="Rule_ValidInput" />
+                        <om:Property Name="Signal" Value="False" />
+                        <om:Element Type="VariableAssignment" OID="d4281b27-0904-43bf-a4bd-41196d6db6ee" ParentLink="ComplexStatement_Statement" LowerBound="45.1" HigherBound="48.1">
+                            <om:Property Name="Expression" Value="Target = &quot;Accepted&quot;;&#xD;&#xA;System.Diagnostics.Trace.WriteLine(System.String.Format(&quot;Order {0} accepted&quot;, Order.MessagePart.OrderNumber));" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="Order Accepted" />
+                            <om:Property Name="Signal" Value="False" />
+                        </om:Element>
+                    </om:Element>
+                    <om:Element Type="DecisionBranch" OID="6253afe7-86e2-4e78-b6f3-ecd33a7e0ad3" ParentLink="ReallyComplexStatement_Branch">
+                        <om:Property Name="IsGhostBranch" Value="True" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="Else" />
+                        <om:Property Name="Signal" Value="False" />
+                        <om:Element Type="VariableAssignment" OID="940c935a-b0b7-4497-a2d6-e83c9c55c088" ParentLink="ComplexStatement_Statement" LowerBound="51.1" HigherBound="54.1">
+                            <om:Property Name="Expression" Value="Target = &quot;NotAccepted&quot;;&#xD;&#xA;System.Diagnostics.Trace.WriteLine(System.String.Format(&quot;Total amount of order {0} to high: {1}&quot;, Order.MessagePart.OrderNumber, Order.MessagePart.Amount * Order.MessagePart.Price));" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="Order Not Accepted" />
+                            <om:Property Name="Signal" Value="True" />
+                        </om:Element>
+                    </om:Element>
+                </om:Element>
+                <om:Element Type="Construct" OID="1617503b-63a7-4d91-b27d-4224495a6a1a" ParentLink="ServiceBody_Statement" LowerBound="55.1" HigherBound="61.1">
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Construct_OrderWithRouting" />
+                    <om:Property Name="Signal" Value="True" />
+                    <om:Element Type="MessageAssignment" OID="4f46a135-e58c-4251-b868-0cc83f6a0ee6" ParentLink="ComplexStatement_Statement" LowerBound="58.1" HigherBound="60.1">
+                        <om:Property Name="Expression" Value="OrderWithRouting = ConvertingBetweenStringAndXLANGMessage.Helpers.XLangMessageHelpers.AddMessagePartFromString(Order, System.String.Format(&quot;&lt;ns0:Routing xmlns:ns0=\&quot;http://ConvertingBetweenStringAndXLANGMessage.Schemas.Routing\&quot;&gt; &lt;Target&gt;{0}&lt;/Target&gt; &lt;/ns0:Routing&gt;&quot;, Target), &quot;RoutingPart&quot;);" />
+                        <om:Property Name="ReportToAnalyst" Value="False" />
+                        <om:Property Name="Name" Value="Create_OrderWithRouting" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                    <om:Element Type="MessageRef" OID="f7888a88-9ecb-4525-8f74-b238d9041e26" ParentLink="Construct_MessageRef" LowerBound="56.23" HigherBound="56.39">
+                        <om:Property Name="Ref" Value="OrderWithRouting" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                </om:Element>
+                <om:Element Type="Send" OID="5f068ba5-27bc-420e-93d4-703f5ac079ee" ParentLink="ServiceBody_Statement" LowerBound="61.1" HigherBound="63.1">
+                    <om:Property Name="PortName" Value="Port_SendOrder" />
+                    <om:Property Name="MessageName" Value="OrderWithRouting" />
+                    <om:Property Name="OperationName" Value="SendOrder" />
+                    <om:Property Name="OperationMessageName" Value="OrderWithRouting" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Send_OrderWithRouting" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="262fb8bf-5e23-45ce-a42e-1d8adf3da8de" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="30.1" HigherBound="32.1">
+                <om:Property Name="PortModifier" Value="Implements" />
+                <om:Property Name="Orientation" Value="Left" />
+                <om:Property Name="PortIndex" Value="-1" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="ConvertingBetweenStringAndXLANGMessage.Orchestrations.PortType_ReceiveOrder" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Port_ReceiveOrder" />
+                <om:Property Name="Signal" Value="True" />
+                <om:Element Type="DirectBindingAttribute" OID="106460d7-84c7-4f0a-8ff3-5a7adbca3c5f" ParentLink="PortDeclaration_CLRAttribute" LowerBound="30.1" HigherBound="31.1">
+                    <om:Property Name="DirectBindingType" Value="MessageBox" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="16c4dc4f-9ac8-45c0-95a4-e90aba26bd65" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="32.1" HigherBound="34.1">
+                <om:Property Name="PortModifier" Value="Uses" />
+                <om:Property Name="Orientation" Value="Right" />
+                <om:Property Name="PortIndex" Value="33" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="ConvertingBetweenStringAndXLANGMessage.Orchestrations.PortType_SendOrder" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Port_SendOrder" />
+                <om:Property Name="Signal" Value="True" />
+                <om:Element Type="DirectBindingAttribute" OID="43c47a1d-f4f8-433d-81bf-774645b28e1d" ParentLink="PortDeclaration_CLRAttribute" LowerBound="32.1" HigherBound="33.1">
+                    <om:Property Name="DirectBindingType" Value="MessageBox" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+    </om:Element>
+</om:MetaModel>
+#endif // __DESIGNER_DATA
+[Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+module ConvertingBetweenStringAndXLANGMessage.Orchestrations
+{
+    internal messagetype MultipartType_Order
+    {
+        body ConvertingBetweenStringAndXLANGMessage.Schemas.Order MessagePart;
+    };
+    internal messagetype MultipartType_OrderWithRouting
+    {
+        body ConvertingBetweenStringAndXLANGMessage.Schemas.Order MessagePart;
+        ConvertingBetweenStringAndXLANGMessage.Schemas.Routing RoutingPart;
+    };
+    internal porttype PortType_ReceiveOrder
+    {
+        oneway ReceiveOrder
+        {
+            MultipartType_Order
+        };
+    };
+    internal porttype PortType_SendOrder
+    {
+        oneway SendOrder
+        {
+            MultipartType_OrderWithRouting
+        };
+    };
+    [Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+    internal service ProcessOrder
+    {
+        [Microsoft.XLANGs.BaseTypes.DirectBinding()]
+        port implements PortType_ReceiveOrder Port_ReceiveOrder;
+        [Microsoft.XLANGs.BaseTypes.DirectBinding()]
+        port uses PortType_SendOrder Port_SendOrder;
+        message MultipartType_Order Order;
+        message MultipartType_OrderWithRouting OrderWithRouting;
+        System.String Target;
+        body ()
+        {
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("6099f1a1-a03a-4fd9-a426-2deb19c00168")]
+            activate ((BTS.ReceivePortName == "ReceivePortOrders"))receive (Port_ReceiveOrder.ReceiveOrder, Order);
+            Target = "";
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("fa587c9a-66f0-492a-b2ac-1201952364be")]
+            if ((Order.MessagePart.Amount * Order.MessagePart.Price) < 10000)
+            {
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("d4281b27-0904-43bf-a4bd-41196d6db6ee")]
+                Target = "Accepted";
+                System.Diagnostics.Trace.WriteLine(System.String.Format("Order {0} accepted", Order.MessagePart.OrderNumber));
+            }
+            else 
+            {
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("940c935a-b0b7-4497-a2d6-e83c9c55c088")]
+                Target = "NotAccepted";
+                System.Diagnostics.Trace.WriteLine(System.String.Format("Total amount of order {0} to high: {1}", Order.MessagePart.OrderNumber, Order.MessagePart.Amount * Order.MessagePart.Price));
+            }
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("1617503b-63a7-4d91-b27d-4224495a6a1a")]
+            construct OrderWithRouting
+            {
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("4f46a135-e58c-4251-b868-0cc83f6a0ee6")]
+                OrderWithRouting = ConvertingBetweenStringAndXLANGMessage.Helpers.XLangMessageHelpers.AddMessagePartFromString(Order, System.String.Format("<ns0:Routing xmlns:ns0=\"http://ConvertingBetweenStringAndXLANGMessage.Schemas.Routing\"> <Target>{0}</Target> </ns0:Routing>", Target), "RoutingPart");
+            }
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("5f068ba5-27bc-420e-93d4-703f5ac079ee")]
+            send (Port_SendOrder.SendOrder, OrderWithRouting);
+        }
+    }
+}
+

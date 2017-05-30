@@ -1,0 +1,206 @@
+﻿#if __DESIGNER_DATA
+#error Do not define __DESIGNER_DATA.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<om:MetaModel MajorVersion="1" MinorVersion="3" Core="2b131234-7959-458d-834f-2dc0769ce683" ScheduleModel="66366196-361d-448d-976f-cab5e87496d2" xmlns:om="http://schemas.microsoft.com/BizTalk/2003/DesignerData">
+    <om:Element Type="Module" OID="6e2d8257-749a-42d6-ad14-c44e6463691f" LowerBound="1.1" HigherBound="47.1">
+        <om:Property Name="ReportToAnalyst" Value="True" />
+        <om:Property Name="Name" Value="ConvertingBetweenStringAndXLANGMessage.Orchestrations" />
+        <om:Property Name="Signal" Value="False" />
+        <om:Element Type="PortType" OID="001c646c-6601-4186-b4ff-c90a83f8d89d" ParentLink="Module_PortType" LowerBound="9.1" HigherBound="16.1">
+            <om:Property Name="Synchronous" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="PortType_SendInvoice" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="OperationDeclaration" OID="343db4a5-d378-4558-854d-61a4a4256569" ParentLink="PortType_OperationDeclaration" LowerBound="11.1" HigherBound="15.1">
+                <om:Property Name="OperationType" Value="OneWay" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="SendInvoice" />
+                <om:Property Name="Signal" Value="True" />
+                <om:Element Type="MessageRef" OID="81e841d0-6614-4f29-bb0d-cc037b50c22e" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="13.13" HigherBound="13.45">
+                    <om:Property Name="Ref" Value="ConvertingBetweenStringAndXLANGMessage.Orchestrations.MultipartType_InvoiceWithRouting" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="InvoiceWithRouting" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="MultipartMessageType" OID="ee3b8fb6-6d66-4d0c-b2e4-4b637601f842" ParentLink="Module_MessageType" LowerBound="4.1" HigherBound="9.1">
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="MultipartType_InvoiceWithRouting" />
+            <om:Property Name="Signal" Value="True" />
+            <om:Element Type="PartDeclaration" OID="c48bc171-fb87-4a1f-865a-144cba210305" ParentLink="MultipartMessageType_PartDeclaration" LowerBound="6.1" HigherBound="7.1">
+                <om:Property Name="ClassName" Value="ConvertingBetweenStringAndXLANGMessage.Schemas.Invoice" />
+                <om:Property Name="IsBodyPart" Value="True" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="MessagePart" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="PartDeclaration" OID="0af91505-d6cd-4cbb-875a-a7326df129a7" ParentLink="MultipartMessageType_PartDeclaration" LowerBound="7.1" HigherBound="8.1">
+                <om:Property Name="ClassName" Value="ConvertingBetweenStringAndXLANGMessage.Schemas.Routing" />
+                <om:Property Name="IsBodyPart" Value="False" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="RoutingPart" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+        </om:Element>
+        <om:Element Type="ServiceDeclaration" OID="2bc4052f-a074-4a32-bac3-e7a14b9b4de3" ParentLink="Module_ServiceDeclaration" LowerBound="16.1" HigherBound="46.1">
+            <om:Property Name="InitializedTransactionType" Value="False" />
+            <om:Property Name="IsInvokable" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="CreateInvoice" />
+            <om:Property Name="Signal" Value="True" />
+            <om:Element Type="VariableDeclaration" OID="f0527578-0739-4e43-ba0e-5752384e0954" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="25.1" HigherBound="26.1">
+                <om:Property Name="UseDefaultConstructor" Value="True" />
+                <om:Property Name="Type" Value="System.Collections.ArrayList" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="List" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="c08ecc8e-f915-4aca-9e2b-617f9eae5e85" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="23.1" HigherBound="24.1">
+                <om:Property Name="Type" Value="ConvertingBetweenStringAndXLANGMessage.Orchestrations.MultipartType_Order" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Order" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="a6cd19e9-c5de-4301-aa49-5e99b2e3f4ec" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="24.1" HigherBound="25.1">
+                <om:Property Name="Type" Value="ConvertingBetweenStringAndXLANGMessage.Orchestrations.MultipartType_InvoiceWithRouting" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="InvoiceWithRouting" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="ServiceBody" OID="cc7c1671-72ea-4fa7-9d6b-340b234d53f6" ParentLink="ServiceDeclaration_ServiceBody">
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="Receive" OID="6099f1a1-a03a-4fd9-a426-2deb19c00168" ParentLink="ServiceBody_Statement" LowerBound="28.1" HigherBound="31.1">
+                    <om:Property Name="Activate" Value="True" />
+                    <om:Property Name="PortName" Value="Port_ReceiveInput" />
+                    <om:Property Name="MessageName" Value="Order" />
+                    <om:Property Name="OperationName" Value="ReceiveOrder" />
+                    <om:Property Name="OperationMessageName" Value="Order" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Receive_Accepted_Order" />
+                    <om:Property Name="Signal" Value="True" />
+                    <om:Element Type="DNFPredicate" OID="da8fa6da-61f3-44c7-add5-835f10b307c8" ParentLink="Receive_DNFPredicate">
+                        <om:Property Name="LHS" Value="BTS.ReceivePortName" />
+                        <om:Property Name="RHS" Value="&quot;ReceivePortAcceptedOrder&quot;" />
+                        <om:Property Name="Grouping" Value="AND" />
+                        <om:Property Name="Operator" Value="Equals" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                </om:Element>
+                <om:Element Type="Construct" OID="1617503b-63a7-4d91-b27d-4224495a6a1a" ParentLink="ServiceBody_Statement" LowerBound="31.1" HigherBound="42.1">
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Construct_InvoiceWithRouting" />
+                    <om:Property Name="Signal" Value="True" />
+                    <om:Element Type="MessageAssignment" OID="4f46a135-e58c-4251-b868-0cc83f6a0ee6" ParentLink="ComplexStatement_Statement" LowerBound="34.1" HigherBound="41.1">
+                        <om:Property Name="Expression" Value="System.Diagnostics.Trace.WriteLine(&quot;Adding invoice&quot;);&#xD;&#xA;List.Add(new ConvertingBetweenStringAndXLANGMessage.Helpers.MessagePart(System.String.Format(&quot;&lt;ns0:Invoice xmlns:ns0=\&quot;http://ConvertingBetweenStringAndXLANGMessage.Schemas.Invoice\&quot;&gt;&lt;OrderNumber&gt;{0}&lt;/OrderNumber&gt; &lt;TotalCost&gt;{1}&lt;/TotalCost&gt; &lt;/ns0:Invoice&gt;&quot;, Order.MessagePart.OrderNumber, Order.MessagePart.Amount * Order.MessagePart.Price), &quot;MessagePart&quot;));&#xD;&#xA;System.Diagnostics.Trace.WriteLine(&quot;Adding routing&quot;);&#xD;&#xA;List.Add(new ConvertingBetweenStringAndXLANGMessage.Helpers.MessagePart(&quot;&lt;ns0:Routing xmlns:ns0=\&quot;http://ConvertingBetweenStringAndXLANGMessage.Schemas.Routing\&quot;&gt;&lt;Target&gt;Invoices&lt;/Target&gt; &lt;/ns0:Routing&gt;&quot;, &quot;RoutingPart&quot;));&#xD;&#xA;System.Diagnostics.Trace.WriteLine(&quot;Creating message&quot;);&#xD;&#xA;InvoiceWithRouting = ConvertingBetweenStringAndXLANGMessage.Helpers.XLangMessageHelpers.CreateXLANGMessageFromString(List);" />
+                        <om:Property Name="ReportToAnalyst" Value="False" />
+                        <om:Property Name="Name" Value="Create_InvoiceWithRouting" />
+                        <om:Property Name="Signal" Value="True" />
+                    </om:Element>
+                    <om:Element Type="MessageRef" OID="99ec3a29-1192-4e6d-b5df-8a81ae6b8143" ParentLink="Construct_MessageRef" LowerBound="32.23" HigherBound="32.41">
+                        <om:Property Name="Ref" Value="InvoiceWithRouting" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                </om:Element>
+                <om:Element Type="Send" OID="5f068ba5-27bc-420e-93d4-703f5ac079ee" ParentLink="ServiceBody_Statement" LowerBound="42.1" HigherBound="44.1">
+                    <om:Property Name="PortName" Value="Port_SendInvoice" />
+                    <om:Property Name="MessageName" Value="InvoiceWithRouting" />
+                    <om:Property Name="OperationName" Value="SendInvoice" />
+                    <om:Property Name="OperationMessageName" Value="InvoiceWithRouting" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Send_Invoice" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="262fb8bf-5e23-45ce-a42e-1d8adf3da8de" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="19.1" HigherBound="21.1">
+                <om:Property Name="PortModifier" Value="Implements" />
+                <om:Property Name="Orientation" Value="Left" />
+                <om:Property Name="PortIndex" Value="-1" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="ConvertingBetweenStringAndXLANGMessage.Orchestrations.PortType_ReceiveOrder" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Port_ReceiveInput" />
+                <om:Property Name="Signal" Value="True" />
+                <om:Element Type="DirectBindingAttribute" OID="106460d7-84c7-4f0a-8ff3-5a7adbca3c5f" ParentLink="PortDeclaration_CLRAttribute" LowerBound="19.1" HigherBound="20.1">
+                    <om:Property Name="DirectBindingType" Value="MessageBox" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="f98b5370-2224-4859-b4b8-03e5e592c06f" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="21.1" HigherBound="23.1">
+                <om:Property Name="PortModifier" Value="Uses" />
+                <om:Property Name="Orientation" Value="Right" />
+                <om:Property Name="PortIndex" Value="15" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="ConvertingBetweenStringAndXLANGMessage.Orchestrations.PortType_SendInvoice" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Port_SendInvoice" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="DirectBindingAttribute" OID="7cb50408-3b2e-455d-927f-2e28c11404d8" ParentLink="PortDeclaration_CLRAttribute" LowerBound="21.1" HigherBound="22.1">
+                    <om:Property Name="DirectBindingType" Value="MessageBox" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+    </om:Element>
+</om:MetaModel>
+#endif // __DESIGNER_DATA
+[Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+module ConvertingBetweenStringAndXLANGMessage.Orchestrations
+{
+    internal messagetype MultipartType_InvoiceWithRouting
+    {
+        body ConvertingBetweenStringAndXLANGMessage.Schemas.Invoice MessagePart;
+        ConvertingBetweenStringAndXLANGMessage.Schemas.Routing RoutingPart;
+    };
+    internal porttype PortType_SendInvoice
+    {
+        oneway SendInvoice
+        {
+            MultipartType_InvoiceWithRouting
+        };
+    };
+    [Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+    internal service CreateInvoice
+    {
+        [Microsoft.XLANGs.BaseTypes.DirectBinding()]
+        port implements PortType_ReceiveOrder Port_ReceiveInput;
+        [Microsoft.XLANGs.BaseTypes.DirectBinding()]
+        port uses PortType_SendInvoice Port_SendInvoice;
+        message MultipartType_Order Order;
+        message MultipartType_InvoiceWithRouting InvoiceWithRouting;
+        System.Collections.ArrayList List;
+        body ()
+        {
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("6099f1a1-a03a-4fd9-a426-2deb19c00168")]
+            activate ((BTS.ReceivePortName == "ReceivePortAcceptedOrder"))receive (Port_ReceiveInput.ReceiveOrder, Order);
+            List = new System.Collections.ArrayList();
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("1617503b-63a7-4d91-b27d-4224495a6a1a")]
+            construct InvoiceWithRouting
+            {
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("4f46a135-e58c-4251-b868-0cc83f6a0ee6")]
+                System.Diagnostics.Trace.WriteLine("Adding invoice");
+                List.Add(new ConvertingBetweenStringAndXLANGMessage.Helpers.MessagePart(System.String.Format("<ns0:Invoice xmlns:ns0=\"http://ConvertingBetweenStringAndXLANGMessage.Schemas.Invoice\"><OrderNumber>{0}</OrderNumber> <TotalCost>{1}</TotalCost> </ns0:Invoice>", Order.MessagePart.OrderNumber, Order.MessagePart.Amount * Order.MessagePart.Price), "MessagePart"));
+                System.Diagnostics.Trace.WriteLine("Adding routing");
+                List.Add(new ConvertingBetweenStringAndXLANGMessage.Helpers.MessagePart("<ns0:Routing xmlns:ns0=\"http://ConvertingBetweenStringAndXLANGMessage.Schemas.Routing\"><Target>Invoices</Target> </ns0:Routing>", "RoutingPart"));
+                System.Diagnostics.Trace.WriteLine("Creating message");
+                InvoiceWithRouting = ConvertingBetweenStringAndXLANGMessage.Helpers.XLangMessageHelpers.CreateXLANGMessageFromString(List);
+            }
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("5f068ba5-27bc-420e-93d4-703f5ac079ee")]
+            send (Port_SendInvoice.SendInvoice, InvoiceWithRouting);
+        }
+    }
+}
+

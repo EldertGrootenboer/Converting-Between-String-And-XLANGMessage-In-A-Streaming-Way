@@ -1,0 +1,7 @@
+<ns0:Order xmlns:ns0="http://ConvertingBetweenStringAndXLANGMessage.Schemas.Input">
+	<OrderNumber>1</OrderNumber> 
+	<Customer>Contoso</Customer> 
+	<Product>Surface Pro 4</Product> 
+	<Price>5</Price> 
+	<Amount>1500</Amount> 
+</ns0:Order>
