@@ -78,7 +78,7 @@ public static XLANGMessage CreateXLANGMessageFromString(string message, string m
 }
 ```
 
-## Create multipart XLANGMessage from strings
+### Create multipart XLANGMessage from strings
 One of the strong suits of BizTalk is the possibility to use multipart messages, so off course we will also want to be able to create these. We will use a new MessagePart class to hold the data for this.
 
 ```C#
